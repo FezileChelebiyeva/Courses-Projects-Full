@@ -7,10 +7,26 @@ const initialState = {
   error: "",
 };
 
-export const getData = createAsyncThunk("getData", async () => {
+export const getData = createAsyncThunk("getData", async (value) => {
   const response = await axios.get("http://localhost:8080/courses");
-  return response.data;
+  if (value === 1) {
+    return response.data.sort((a, b) => a.price - b.price);
+  } 
+  else if (value) {
+    return response.data.filter((elem) =>
+      elem.name.toLocaleLowerCase().includes(value.toLocaleLowerCase())
+    );
+  } 
+  else {
+    return response.data;
+  }
+});
 
+export const postData = createAsyncThunk("postData", async (obj) => {
+  await axios.post("http://localhost:8080/courses", obj);
+});
+export const deleteData = createAsyncThunk("deleteData", async (id) => {
+  await axios.delete(`http://localhost:8080/courses/${id}`);
 });
 
 export const dataSlice = createSlice({

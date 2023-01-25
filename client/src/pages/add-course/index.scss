@@ -1,0 +1,65 @@
+#add-page {
+  padding: 100px 0;
+  padding-top: 200px;
+  background-color: aliceblue;
+  .add-page {
+    .div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .line {
+        width: 60px;
+        height: 4px;
+        background-color: #ffb606;
+        margin: 20px 0;
+      }
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 35px;
+    }
+    .form {
+      display: flex;
+      justify-content: center;
+      .input {
+        margin-top: 20px;
+        input {
+          width: 800px;
+          border: 1px solid rgb(218, 218, 218);
+          outline: 0;
+          padding: 10px 20px;
+          font-weight: 700;
+          &:focus {
+            border: 1px solid #ffb606;
+          }
+        }
+        .error{
+            color: red;
+            margin: 5px 0;
+            font-size: 13px;
+        }
+      }
+      .btn {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        button {
+          width: 100%;
+          padding: 13px 20px;
+          background-color: #ffb606;
+          color: #fff;
+          border: 0;
+          outline: 0;
+          font-weight: 700;
+          font-size: 15px;
+          cursor: pointer;
+          &:hover {
+            box-shadow: 0px 0px 5px 0px rgb(167, 167, 167);
+          }
+        }
+      }
+    }
+  }
+}

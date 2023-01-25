@@ -1,0 +1,14 @@
+#details{
+    padding: 100px 0;
+    padding-top: 200px;
+    .details{
+        display: flex;
+        column-gap: 80px;
+        align-items: center;
+        .info{
+            p{
+                padding: 20px 0;
+            }
+        }
+    }
+}

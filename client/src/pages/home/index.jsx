@@ -15,9 +15,14 @@ import icon6 from "../../assets/image/icon1.svg";
 import image1 from "../../assets/image/event_1.jpg.webp";
 import image2 from "../../assets/image/event_2.jpg.webp";
 import image3 from "../../assets/image/event_3.jpg.webp";
+import { Helmet } from "react-helmet";
 const HomePage = () => {
   return (
     <div id="home">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Course</title>
+      </Helmet>
       <section id="section-first">
         <Swiper
           modules={[Navigation, Pagination]}
@@ -167,12 +172,14 @@ const HomePage = () => {
             <div className="cards">
               <div className="card">
                 <div className="date">
-                  <h1>07</h1>
-                  <h1>January</h1>
+                  <div>
+                    <h1>07</h1>
+                    <p>January</p>
+                  </div>
                 </div>
                 <div className="text">
-                  <h1>Student Festival</h1>
-                  <p>Grand Central Park</p>
+                  <h3>Student Festival</h3>
+                  <p className="name">Grand Central Park</p>
                   <p>
                     In aliquam, augue a gravida rutrum, ante nisl fermentum
                     nulla, vitae tempor nisl ligula vel nunc. Proin quis mi
@@ -183,8 +190,46 @@ const HomePage = () => {
                   <img src={image1} alt="" />
                 </div>
               </div>
-              <div className="card"></div>
-              <div className="card"></div>
+              <div className="card">
+                <div className="date">
+                  <div>
+                    <h1>07</h1>
+                    <p>January</p>
+                  </div>
+                </div>
+                <div className="text">
+                  <h3>Student Festival</h3>
+                  <p className="name">Grand Central Park</p>
+                  <p>
+                    In aliquam, augue a gravida rutrum, ante nisl fermentum
+                    nulla, vitae tempor nisl ligula vel nunc. Proin quis mi
+                    malesuada, finibus tortor.
+                  </p>
+                </div>
+                <div className="img">
+                  <img src={image2} alt="" />
+                </div>
+              </div>
+              <div className="card">
+                <div className="date">
+                  <div>
+                    <h1>07</h1>
+                    <p>January</p>
+                  </div>
+                </div>
+                <div className="text">
+                  <h3>Student Festival</h3>
+                  <p className="name">Grand Central Park</p>
+                  <p>
+                    In aliquam, augue a gravida rutrum, ante nisl fermentum
+                    nulla, vitae tempor nisl ligula vel nunc. Proin quis mi
+                    malesuada, finibus tortor.
+                  </p>
+                </div>
+                <div className="img">
+                  <img src={image3} alt="" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -17,6 +17,44 @@
       margin-bottom: 60px;
       font-weight: 600;
     }
+    .search-sort{
+      padding: 30px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      input{
+        width: 600px;
+        border: 1px solid rgb(218, 218, 218);
+        outline: 0;
+        padding: 8px 20px;
+        font-weight: 700;
+        &:focus {
+          border: 1px solid #ffb606;
+        }
+      }
+      button{
+        width: 150px;
+        padding: 10px 20px;
+        background-color: #ffb606;
+        color: #fff;
+        border: 0;
+        outline: 0;
+        font-weight: 700;
+        font-size: 15px;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 0px 0px 5px 0px rgb(167, 167, 167);
+        }
+      }
+    }
+    .icon{
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      .fa-solid{
+        color: red;
+      }
+    }
     .cards {
       width: 100%;
       display: flex;
@@ -27,7 +65,7 @@
         width: 32%;
         .img {
           img {
-            width: 380px;
+            width: 385px;
           }
         }
         .about {
@@ -44,8 +82,26 @@
             font-size: 14px;
           }
         }
+        .btn {
+          margin-top: 40px;
+          display: flex;
+          justify-content: center;
+          button {
+            border: 0;
+            outline: 0;
+            background-color: #ffb606;
+            padding: 10px 20px;
+            color: #ffffff;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+              box-shadow: 0px 0px 5px 0px rgb(31, 31, 31);
+            }
+          }
+        }
         .author {
-          margin-top: 50px;
+          margin-top: 40px;
           display: flex;
           justify-content: space-between;
           background-color: #eaebec;

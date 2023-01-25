@@ -30,6 +30,45 @@ app.get("/courses", (req, res) => {
   });
 });
 
+app.get("/courses/:id", (req, res) => {
+  const { id } = req.params;
+  Courses.findById(id, (err, doc) => {
+    if (!err) {
+      if (doc) {
+        res.send(doc);
+      } else {
+        res.status(404).json({ message: "undefined course" });
+      }
+    } else {
+      res.status(505).json({ message: err });
+    }
+  });
+});
+
+app.delete("/courses/:id", (req, res) => {
+  const { id } = req.params;
+  Courses.findByIdAndDelete(id, (err) => {
+    if (!err) {
+      res.status(200).json({ message: "course deleted" });
+    } else {
+      res.status(404).json({ message: err });
+    }
+  });
+});
+
+app.post("/courses", (req, res) => {
+  let course = new Courses({
+    image: req.body.image,
+    name: req.body.name,
+    title: req.body.title,
+    author: req.body.author,
+    authorImg: req.body.authorImg,
+    price: req.body.price,
+  });
+  course.save();
+  res.status(200).json({ message: "course added" });
+});
+
 const PORT = process.env.PORT;
 const DB = process.env.DB_URL.replace("<password>", process.env.PASSWORD);
 

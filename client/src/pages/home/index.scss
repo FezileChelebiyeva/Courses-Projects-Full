@@ -205,6 +205,7 @@
     }
   }
   #events {
+    padding: 80px 0;
     .events {
       .div {
         display: flex;
@@ -225,9 +226,46 @@
       }
       .cards{
         .card{
+          margin-top: 20px;
           display: flex;
+          column-gap: 50px;
+          align-items: center;
           .date{
-            
+            border: 2px solid #ffb606;
+            width: 300px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1{
+              margin: 0;
+              color: #ffb606;
+              font-size: 45px;
+            }
+            p{
+              margin: 0;
+              color: #ffb606;
+              font-weight: 800;
+            }
+          }
+          .img{
+            img{
+              width: 400px;
+            }
+          }
+          .text{
+            .name{
+              color: #000;
+              font-weight: 500;
+              margin-top: 5px;
+            }
+            p{
+              margin-top: 10px;
+              line-height: 30px;
+              font-weight: 700;
+              color: rgb(182, 182, 182);
+              font-size: 14px;
+            }
           }
         }
       }
