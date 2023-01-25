@@ -179,7 +179,9 @@ const HomePage = () => {
                     malesuada, finibus tortor.
                   </p>
                 </div>
-                <div className="img"></div>
+                <div className="img">
+                  <img src={image1} alt="" />
+                </div>
               </div>
               <div className="card"></div>
               <div className="card"></div>
